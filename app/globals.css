@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@font-face {
+  font-family: 'burtons';
+  src: url(../public/Burtons.otf);
+}
+
+.dark{
+  background-color: #222;
+  color: #fff;
+}
