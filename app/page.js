@@ -6,6 +6,12 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub, AiFillGoogleSquare} from 'react-icons/ai';
 import { useState } from 'react';
 export default function Home() {
+  const MailButton = () => {
+    const email = 'Neeraj2612singh@gmail.com';
+  }
+    const handleMailClick = () => {
+      window.location.href = `mailto:${email}`;
+  };
   const [isDarkMode, setIsDarkMode] = useState('false');
   const toggleDarkMode = () => {
     setIsDarkMode(prevMode => !prevMode);
@@ -36,7 +42,7 @@ export default function Home() {
       <div className='text-5xl flex justify-center gap-8 '>
         <a href='https://www.linkedin.com/in/neeraj-saini-6a8392238' target="_blank"><AiFillLinkedin className={` ${isDarkMode ? 'text-white' : 'text-gray-600'} hover:text-gray-700 md:text-6xl`}/></a>
         <a href='https://github.com/neeraj2612' target='_blank'><AiFillGithub className={` ${isDarkMode ? 'text-white' : 'text-gray-600'} hover:text-gray-700 md:text-6xl`}/></a>
-        <a href= 'mailto:Neeraj2612singh@gmail.com'><AiFillGoogleSquare className={` ${isDarkMode ? 'text-white' : 'text-gray-600'} hover:text-gray-700 md:text-6xl`}/></a>
+        <button onClick={handleMailClick}><AiFillGoogleSquare className={` ${isDarkMode ? 'text-white' : 'text-gray-600'} hover:text-gray-700 md:text-6xl`}/></button>
         </div>
       <div className='relative mt-10 '>
         <Image src = {niraj} className='rounded-full shadow-xl w-80 h-80 mx-auto hover:shadow-2xl ' />
@@ -82,7 +88,7 @@ export default function Home() {
       <div className='text-center m-10'>
         <h2 className='text-5xl bg-gradient-to-r from-teal-500 to-cyan-600 inline-block text-transparent bg-clip-text font-medium mb-2 md:text-6xl'>PROJECTS</h2>
         <p className={` md:text-xl md:font-semibold py-3 leading-6 ${isDarkMode ? 'text-white' : 'text-gray-600'}`} >Projects that i have worked on!</p>
-        <ul className={`flex mt-5 pb-5 shadow-xl rounded-lg justify-center ${isDarkMode ?   'bg-gradient-to-r from-gray-850 via-gray-800 to-gray-900' : 'bg-gradient-to-r from-white to-teal-50'}`}>
+        <ul className={`flex mt-5 pb-2 shadow-xl rounded-lg justify-center ${isDarkMode ?   'bg-gradient-to-r from-gray-850 via-gray-800 to-gray-900' : 'bg-gradient-to-r from-white to-teal-50'}`}>
         <li className='p-5 mx-2 hover:bg-teal-100 hover:shadow-xl md:px-20'><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height={120} width={120}/></li>
         <li className='p-5 hover:bg-teal-100 hover:shadow-xl md:px-20'><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height={120} width={120}/></li>
         <a href='https://www.figma.com/files/recent?fuid=860513957482117094 ' target='_blank'><li className='p-5 mx-2 hover:bg-teal-100  hover:shadow-xl md:px-20'><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height={120} width={120}/></li></a>
